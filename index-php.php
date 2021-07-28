@@ -27,15 +27,15 @@ include "db.php";
 
         <!-- intestazione -->
         <header>
-            <div class="container-fluid">
+            <div class="container-fluid w-75 py-5">
                 <div class="row justify-content-between">
                     <!-- logo -->
-                    <div class="col-1 text-end">
+                    <div class="col-4">
                     <i class="fas fa-compact-disc"></i>
                     </div>
 
                     <!-- titolo -->
-                    <div class="col-1">
+                    <div class="col-4 text-end">
                         <h1>Best Vinil</h1>
                     </div>
                 </div>

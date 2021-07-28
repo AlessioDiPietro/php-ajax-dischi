@@ -14,3 +14,14 @@ body {
 /* fine area debug */
 
 /* header */
+header {
+    background-color: rgb(49, 49, 165);
+}
+header i, header h1{
+    color: beige  !important;
+    font-size: 60px;
+}
+header i {
+    color: rgb(238, 238, 90) !important;
+    line-height: inherit;
+}
