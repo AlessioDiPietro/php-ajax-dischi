@@ -47,18 +47,18 @@ include "db.php";
         <!-- corpo pagina -->
         <main>
             <div class="container">
-                <div class="row">
+                <div class="row justify-content-around">
 
                     <?php foreach($music as $key => $item) {?>  
-                        <div class="card bg-dark" style="width: 18rem;">
+                        <div class="card bg-dark m-2 p-2" style="width: 18rem;">
                             
                             
                                 <img src="<?php echo $item["poster"]?>" class="card-img-top" alt="<?php echo $item["title"]?>">
                                 <div class="card-body text-center">
-                                    <h2 class="card-title"><?php echo $item["title"]?></h5>
-                                    <h4 class="card-text"><?php echo $item["author"]?></h4>
-                                    <h4 class="card-text"><?php echo $item["genre"]?></h4>
-                                    <h6 class="card-text"><?php echo $item["year"]?></h6>
+                                    <h2 class="mb-3" style="color: khaki;"><?php echo $item["title"]?></h5>
+                                    <h4 class="my-0"><?php echo $item["author"]?></h4>
+                                    <h4><?php echo $item["genre"]?></h4>
+                                    <h6 class="mt-4"><?php echo $item["year"]?></h6>
                                 </div>
                                 
                               
