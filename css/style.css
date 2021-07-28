@@ -16,6 +16,8 @@ body {
 /* header */
 header {
     background-color: rgb(49, 49, 165);
+    z-index: 999;
+    
 }
 header i, header h1{
     color: beige  !important;
