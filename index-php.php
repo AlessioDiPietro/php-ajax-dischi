@@ -22,12 +22,12 @@ include "db.php";
     <title>dischi php</title>
 </head>
 <body>
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0 position-relative">
 
 
         <!-- intestazione -->
-        <header>
-            <div class="container-fluid w-75 py-5">
+        <header class="position-absolute top-0 w-100">
+            <div class="container-fluid w-75 py-3 ">
                 <div class="row justify-content-between">
                     <!-- logo -->
                     <div class="col-4">
@@ -45,9 +45,9 @@ include "db.php";
     
     
         <!-- corpo pagina -->
-        <main>
-            <div class="container">
-                <div class="row justify-content-around">
+        <main class="pt-5">
+            <div class="container pt-5">
+                <div class="row justify-content-around pt-5">
 
                     <?php foreach($music as $key => $item) {?>  
                         <div class="card bg-dark m-2 p-2" style="width: 18rem;">
