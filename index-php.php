@@ -45,7 +45,28 @@ include "db.php";
     
     
         <!-- corpo pagina -->
-        <main></main>
+        <main>
+            <div class="container">
+                <div class="row">
+
+                    <?php foreach($music as $key => $item) {?>  
+                        <div class="card bg-dark" style="width: 18rem;">
+                            
+                            
+                                <img src="<?php echo $item["poster"]?>" class="card-img-top" alt="<?php echo $item["title"]?>">
+                                <div class="card-body text-center">
+                                    <h2 class="card-title"><?php echo $item["title"]?></h5>
+                                    <h4 class="card-text"><?php echo $item["author"]?></h4>
+                                    <h4 class="card-text"><?php echo $item["genre"]?></h4>
+                                    <h6 class="card-text"><?php echo $item["year"]?></h6>
+                                </div>
+                                
+                              
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </main>
         
     </div>
 
