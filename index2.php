@@ -27,7 +27,7 @@
         <div class="container-fluid p-0 position-relative">
             
             <!-- intestazione -->
-            <header class="position-absolute top-0 w-100">
+            <header class="position-fixed top-0 w-100">
                 <div class="container-fluid w-75 py-3 ">
                     <div class="row justify-content-between">
                         <!-- logo -->
@@ -48,24 +48,51 @@
             <!-- corpo pagina -->
             <main class="pt-5">
                 <div class="container pt-5">
+
+                    <!-- tutti i brani -->
                     <div class="row justify-content-around pt-5">
+                        <h2>I tuoi brani:</h2>
                         
                         
                         <div class="card bg-dark m-2 p-2" style="width: 18rem;" v-for="music in arrayMusic">
                             
                             
                             <img :src="music.poster" class="card-img-top" :alt="music.title">
-                                    <div class="card-body text-center">
-                                        <h2 class="mb-3" style="color: khaki;">{{music.title}}</h5>
-                                        <h4 class="my-0">{{music.author}}</h4>
-                                        <h4>{{music.genre}}</h4>
-                                        <h6 class="mt-4">{{music.year}}</h6>
-                                    </div>
-                                    
-                                    
-                                </div>
-                                
+                            <div class="card-body text-center">
+                                <h2 class="mb-3" style="color: khaki;">{{music.title}}</h5>
+                                <h4 class="my-0">{{music.author}}</h4>
+                                <h4>{{music.genre}}</h4>
+                                <h6 class="mt-4">{{music.year}}</h6>
                             </div>
+                                    
+                                    
+                        </div>
+                                
+                    </div>
+
+
+                    <!-- branifiltrati -->
+                    <div class="row justify-content-around pt-5">
+                        <h2>I tuoi brani filtrati:</h2>
+                        <input type="text" class="form-control mb-5" placeholder="GENERE" aria-label="GENERE" aria-describedby="basic-addon1" v-model="genreType" @keyup="getFilterGenre">
+                        
+                        
+                        
+                        <div class="card bg-dark m-2 p-2" style="width: 18rem;" v-for="fMusic in filterGenre">
+                            
+                            
+                            <img :src="fMusic.poster" class="card-img-top" :alt="fMusic.title">
+                            <div class="card-body text-center">
+                                <h2 class="mb-3" style="color: khaki;">{{fMusic.title}}</h5>
+                                <h4 class="my-0">{{fMusic.author}}</h4>
+                                <h4>{{fMusic.genre}}</h4>
+                                <h6 class="mt-4">{{fMusic.year}}</h6>
+                            </div>
+                                    
+                                    
+                        </div>
+                                
+                    </div>
                 </div>
             </main>
             
