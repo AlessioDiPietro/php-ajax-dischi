@@ -72,4 +72,5 @@ $music = [
     ]
 
 ];
-
+header('Content-type: application/json');
+echo json($music);

@@ -25,7 +25,6 @@ header i, header h1{
 }
 header i {
     color: rgb(238, 238, 90) !important;
-    line-height: inherit;
 }
 
 

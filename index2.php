@@ -1,8 +1,3 @@
-<?php
-include "db.php";
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +17,7 @@ include "db.php";
     <title>dischi php</title>
 </head>
 <body>
-    <div class="container-fluid p-0 position-relative">
+    <div class="container-fluid p-0 position-relative" id="app">
 
 
         <!-- intestazione -->
@@ -49,21 +44,21 @@ include "db.php";
             <div class="container pt-5">
                 <div class="row justify-content-around pt-5">
 
-                    <?php foreach($music as $key => $item) {?>  
+                     
                         <div class="card bg-dark m-2 p-2" style="width: 18rem;">
                             
                             
-                                <img src="<?php echo $item["poster"]?>" class="card-img-top" alt="<?php echo $item["title"]?>">
+                                <img src="" class="card-img-top" alt="">
                                 <div class="card-body text-center">
-                                    <h2 class="mb-3" style="color: khaki;"><?php echo $item["title"]?></h5>
-                                    <h4 class="my-0"><?php echo $item["author"]?></h4>
-                                    <h4><?php echo $item["genre"]?></h4>
-                                    <h6 class="mt-4"><?php echo $item["year"]?></h6>
+                                    <h2 class="mb-3" style="color: khaki;"></h5>
+                                    <h4 class="my-0"></h4>
+                                    <h4></h4>
+                                    <h6 class="mt-4"></h6>
                                 </div>
                                 
                               
                         </div>
-                    <?php } ?>
+                    
                 </div>
             </div>
         </main>
@@ -74,8 +69,16 @@ include "db.php";
 
 
 
-
+    <!-- my js -->
+    <script src="script.js"></script>
+    <!-- vue js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <!-- JS BOOSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<!-- Seconda Milestone:
+Attraverso l’utilizzo di axios: al caricamento della pagina axios chiederà, attraverso una chiamata api, i dischi a php e li stamperà attraverso vue.
+Bonus:
+Attraverso un’altra chiamata api, filtrare gli album per genere -->
